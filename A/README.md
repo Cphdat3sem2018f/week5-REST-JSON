@@ -7,21 +7,21 @@
 
 ## Learning Objectives
 After this week, you should:
-  * Understand the principles of RESTful APIs.
+  * Understand the principles of RESTful APIs
   * Be able to implement a REST API using Java's JAX-RX API
-  * Be able to implement a JSON API in java, using google's GSON library.
+  * Be able to implement a JSON API in java, using google's GSON library
   * Be able to handle both success and error responses in a REST API
 
 ## Business competences
 REST has become the current standard for designing web APIs, and is used for
-virtually everything on the internet.
+virtually everything on the internet
 
 These lessons will provide the student with the necessary background to build
-RESTful APIs in java.
+RESTful APIs in java
 
 ## Exercises 
   * [Exercise Day1]() Rest principles
-  * [Exercise Day2]() REST api with DTOs
+  * [Exercise Day2]() REST API with DTOs
   * [Exercise Day3]() Error handling
   * [StudyPoint Exercise]()
 
@@ -53,7 +53,7 @@ DTOs
 
 ### Day3 - REST Errorhandling
 
-Jersey 2.27 UserGuide (Section 7):
+Jersey 2.27 UserGuide (Section 7)
   * [Jersey User Guide - Representations and responses](https://jersey.github.io/documentation/latest/index.html)
 
 Oracle Docs Response
