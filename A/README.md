@@ -27,18 +27,18 @@ RESTful APIs in java.
 
 ## Plan
 
-### Day1 - REST introduction and initial JAX setup and endpoints.
+### Day1 - REST Introduction + Initial JAX setup and endpoints
 
 Restful Web Services Tutorial:
-  * [RESTfull Web Services](http://www.drdobbs.com/web-development/restful-web-services-a-tutorial/240169069?pgno=1)
+  * [RESTful Web Services](http://www.drdobbs.com/web-development/restful-web-services-a-tutorial/240169069?pgno=1)
 
 Oracle Java Web Services (Chapter 27 - 29):
-  * [link](https://docs.oracle.com/javaee/7/tutorial/partwebsvcs.htm#BNAYK)
+  * [Web Services Tutorial](https://docs.oracle.com/javaee/7/tutorial/partwebsvcs.htm#BNAYK)
 
 Jersey 2.27 UserGuide (Section 3):
   * [Jersey User Guide - JAX-RS](https://jersey.github.io/documentation/latest/index.html)
 
-### Day2 - JSON, GSON and data-transfer objects (DTOs)
+### Day2 - JSON, GSON and Data-Transfer Objects (DTOs)
 
 JSON (Data types & Arrays & Objects)
   * [W3Schools - JSON](https://www.w3schools.com/js/js_json_intro.asp)
@@ -51,7 +51,7 @@ GSON (Tutorial1 || Tutorial2)
 DTOs
   * [Wikipedia - DTOs](https://en.wikipedia.org/wiki/Data_transfer_object)
 
-### Day3 - Errorhandling with REST
+### Day3 - REST Errorhandling
 
 Jersey 2.27 UserGuide (Section 7):
   * [Jersey User Guide - Representations and responses](https://jersey.github.io/documentation/latest/index.html)
