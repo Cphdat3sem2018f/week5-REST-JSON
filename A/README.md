@@ -38,7 +38,7 @@ Oracle Java Web Services (Chapter 27 - 29):
 Jersey 2.27 UserGuide (Section 3):
   * [Jersey User Guide - JAX-RS](https://jersey.github.io/documentation/latest/index.html)
 
-### Day2 - JSON, GSON and Data-Transfer Objects (DTOs)
+### Day2 - JSON + GSON + Data-Transfer Objects (DTOs)
 
 JSON (Data types & Arrays & Objects)
   * [W3Schools - JSON](https://www.w3schools.com/js/js_json_intro.asp)
