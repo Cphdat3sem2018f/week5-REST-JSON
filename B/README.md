@@ -134,6 +134,10 @@ We will use the JAX-RS specifications in java to create restful webservices in t
 4. Open ApplicationConfig.java -> change to class annotation to `@javax.ws.rs.ApplicationPath("api")` 
      
 5. Open your new <Something>Ressource.java file and write your rest methods in here. Start implementing the GET method that is already there so it just returns a String ala: "Helle from your web service".
+e.g:
+```java
+"{\"message\":\"Hello from Rest service\"}";
+```
 6. Open pom.xml and insert into the dependencies section: 
 ```xml
 <dependency>
