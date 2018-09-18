@@ -3,7 +3,7 @@
 [REST Plan](REST_LearningObjectives&Plan.pdf)  
 [REST Slides](REST_Slides.pdf)  
 [REST Notes](REST_Notes.pdf)  
-[REST Project](REST)  
+[REST Project](rest)  
 
 ## Learning Objectives
 After this week, you should:
