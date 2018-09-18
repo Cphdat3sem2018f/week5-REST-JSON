@@ -1,6 +1,6 @@
 # REST (RESTful Webservices) with JAX-RS
 
-[REST Plan](REST_Plan.pdf)  
+[REST Plan](REST_LearningObjectives&Plan.pdf)  
 [REST Slides](REST_Slides.pdf)  
 [REST Notes](REST_Notes.pdf)  
 [REST Project](REST)  
