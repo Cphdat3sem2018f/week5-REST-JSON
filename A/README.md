@@ -1,6 +1,6 @@
 # REST (RESTful Webservices) with JAX-RS
 
-[REST Plan](REST_Plan.pdf)  
+[REST Plan](REST_LearningObjectives&Plan.pdf)  
 [REST Slides](REST_Slides.pdf)  
 [REST Notes](REST_Notes.pdf)  
 [REST Project](REST)  
@@ -20,11 +20,11 @@ These lessons will provide the student with the necessary background to build
 RESTful APIs in java
 
 ## Exercises 
-  * [Exercise Day1]() Rest principles
+  * [Exercise Day1](https://docs.google.com/document/d/1IKTh5aFDzg9d3A2Kt6rRZsLAW-9PfvoXyLmyjCp0I4E/edit?usp=sharing) Basic Rest
   * [Exercise Day2]() REST API with DTOs
   * [Exercise Day3]() Error handling
-  * [StudyPoint Exercise]()
-
+  * [StudyPoint Exercise](https://docs.google.com/document/d/1aqJx93Y9fROeYq6xbneWoBstVeDXIn00vimT0AWqaPk/edit?usp=sharing)
+  
 ## Plan
 
 ### Day1 - REST Introduction + Initial JAX setup and endpoints
