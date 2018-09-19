@@ -7,6 +7,12 @@ public class Structure
 {
     public static void main(String[] args)
     {
-        Persistence.generateSchema("jpapu", new HashMap<String, Object>());
+        HashMap<String, Object> puproperties = new HashMap<>();
+        
+        puproperties.put("javax.persistence.sql-load-script-source", "scripts/ClearDB.sql");
+        Persistence.generateSchema("jpapu", puproperties);
+        puproperties.remove("javax.persistence.sql-load-script-source");
+        
+        Persistence.generateSchema("jpapu", puproperties);
     }
 }
