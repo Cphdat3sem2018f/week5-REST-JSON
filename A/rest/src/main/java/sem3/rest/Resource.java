@@ -2,7 +2,13 @@ package sem3.rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import entity.Address;
+import entity.Person;
 import entity.User;
+import java.util.ArrayList;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Consumes;
@@ -28,7 +34,7 @@ public class Resource
     private HttpHeaders httpHeaders;
 
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    
+    JsonParser jsonParser = new JsonParser();
     
     public Resource()
     {
@@ -89,6 +95,38 @@ public class Resource
         System.out.println(user);
         
         String jsonBack = gson.toJson(user);
+        
+        JsonObject jo1 = new JsonObject();
+        jo1.addProperty("street", "First Road 1");
+        jo1.addProperty("city", "Berlin");
+        Address a = gson.fromJson(jo1, Address.class);
+        System.out.println("AddressJson" + a);
+        
+        JsonObject jo2 = jsonParser.parse(json).getAsJsonObject();
+        System.out.println("street: " + jo2.has("street"));
+        System.out.println("STREET: " + jo2.has("STREET"));
+        System.out.println("streetValue: " + jo2.get("street").getAsString());
+        
+        JsonArray ja = new JsonArray();
+        ja.add(jo1);
+        ja.add(jo2);
+        String json2 = gson.toJson(ja);
+        System.out.println("JSONARRAY: " + json2);
+        
+        ArrayList<Address> addresses = new ArrayList();
+        addresses.add(a);
+        addresses.add(a);
+        String json3 = gson.toJson(addresses);
+        System.out.println("ADDRESSES: " + json3);
+        
+        Person p = new Person("John", "Williams", 2343567);
+        p.addAddress(a);
+        //a.addPerson(p);
+        String json4 = gson.toJson(p);
+        System.out.println("Bidirectional: " + json4);
+        
+        //ArrayList<Person> persons = new ArrayList();
+        
         
         //return Response.ok().entity(user).build();
         return Response.ok().entity(jsonBack).build();
