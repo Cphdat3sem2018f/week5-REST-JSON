@@ -1,9 +1,8 @@
-package Facade;
+package facade;
 
 import entity.Person;
 import entity.PersonDTO;
 import facade.FacadePerson;
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Persistence;
 import org.junit.After;
@@ -13,10 +12,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-
 public class FacadePersonTest
 {
-    FacadePerson fp = new FacadePerson(Persistence.createEntityManagerFactory("jpapuTEST"));
+    FacadePerson fp = new FacadePerson(Persistence.createEntityManagerFactory("jpapuTest"));
     
     public FacadePersonTest()
     {

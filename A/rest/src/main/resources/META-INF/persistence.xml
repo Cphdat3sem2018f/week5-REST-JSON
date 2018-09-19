@@ -14,7 +14,7 @@
       <property name="eclipselink.canonicalmodel.subpackage" value="production"/>
     </properties>
   </persistence-unit>
-  <persistence-unit name="jpapuTEST" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="jpapuTest" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>entity.Address</class>
     <class>entity.Person</class>

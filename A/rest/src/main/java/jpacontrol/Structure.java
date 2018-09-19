@@ -1,4 +1,4 @@
-package JPAControl;
+package jpacontrol;
 
 import java.util.HashMap;
 import javax.persistence.Persistence;

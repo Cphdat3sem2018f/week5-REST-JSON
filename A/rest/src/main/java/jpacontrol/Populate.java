@@ -1,4 +1,4 @@
-package JPAControl;
+package jpacontrol;
 
 import entity.Address;
 import entity.Person;

@@ -1,4 +1,4 @@
-package sem3.rest;
+package rest;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
