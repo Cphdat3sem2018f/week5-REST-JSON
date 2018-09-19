@@ -21,8 +21,8 @@ RESTful APIs in java
 
 ## Exercises 
   * [Exercise Day1](https://docs.google.com/document/d/1IKTh5aFDzg9d3A2Kt6rRZsLAW-9PfvoXyLmyjCp0I4E/edit?usp=sharing) Basic Rest
-  * [Exercise Day2]() REST API with DTOs
-  * [Exercise Day3]() Error handling
+  * [Exercise Day2](https://docs.google.com/document/d/1KkBqVkIZnG5cwAs7TtxNPA0syOXoTqC-wRk2TEyLbzg/edit#heading=h.wtven3wlkhz2) REST API with DTOs
+  * [Exercise Day3](https://docs.google.com/document/d/1VD-_3QHWrP-asOArc786JGAtlVkjhu6Iaj8UHfWByyg/edit) Error handling
   * [StudyPoint Exercise](https://docs.google.com/document/d/1aqJx93Y9fROeYq6xbneWoBstVeDXIn00vimT0AWqaPk/edit?usp=sharing)
   
 ## Plan
