@@ -1,12 +1,26 @@
 package entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
-public class Address
+@Entity
+public class Address implements Serializable
 {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
     private String street;
     private String city;
-    private ArrayList<Person> persons = new ArrayList();
+    
+    @ManyToMany(mappedBy = "addresses")
+    private List<Person> persons = new ArrayList();
 
     public Address()
     {
@@ -38,7 +52,7 @@ public class Address
         this.city = city;
     }
 
-    public ArrayList<Person> getPersons()
+    public List<Person> getPersons()
     {
         return persons;
     }
@@ -58,6 +72,4 @@ public class Address
     {
         return "Address{" + "street=" + street + ", city=" + city + '}';
     }
-    
-    
 }

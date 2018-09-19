@@ -1,13 +1,28 @@
 package entity;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
-public class Person
+@Entity
+public class Person implements Serializable
 {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
     private String firstName;
     private String lastName;
     private int phoneNumber;
-    private ArrayList<Address> addresses = new ArrayList();
+        
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Address> addresses = new ArrayList();
 
     public Person()
     {
@@ -18,6 +33,16 @@ public class Person
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
+    }
+
+    public Long getId()
+    {
+        return id;
+    }
+
+    public void setId(Long id)
+    {
+        this.id = id;
     }
 
     public String getFirstName()
@@ -50,7 +75,7 @@ public class Person
         this.phoneNumber = phoneNumber;
     }
 
-    public ArrayList<Address> getAddresses()
+    public List<Address> getAddresses()
     {
         return addresses;
     }

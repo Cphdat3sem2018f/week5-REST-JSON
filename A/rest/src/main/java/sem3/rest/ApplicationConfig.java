@@ -16,6 +16,7 @@ public class ApplicationConfig extends Application
 
     private void addRestResourceClasses(Set<Class<?>> resources)
     {
+        resources.add(sem3.rest.RESTPerson.class);
         resources.add(sem3.rest.Resource.class);
     }    
 }
