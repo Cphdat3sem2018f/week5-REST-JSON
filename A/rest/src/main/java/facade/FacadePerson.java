@@ -5,6 +5,7 @@ import entity.PersonDTO;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 public class FacadePerson
@@ -16,7 +17,7 @@ public class FacadePerson
         this.emf = emf;
     }
     
-    public Person getPerson(Long id)
+    public Person getPerson(Person person)
     {
         EntityManager em = emf.createEntityManager();
 
@@ -25,7 +26,10 @@ public class FacadePerson
         try
         {
             em.getTransaction().begin();
-            p = em.find(Person.class, id);
+            Query query = em.createQuery("select p from Person p where p.firstName = :firstName", Person.class);
+            query.setParameter("firstName", person.getFirstName());
+            query.setParameter("lastName", person.getLastName()); 
+            p = (Person) query.getSingleResult();
             em.getTransaction().commit();
             return p;
         }
@@ -45,10 +49,9 @@ public class FacadePerson
         {
             em.getTransaction().begin();
             //persons = em.createQuery("Select p from Person p").getResultList();
-            //TypedQuery<PersonDTO> query = em.createQuery("Select new entity.PersonDTO(p.firstName, p.lastName, p.phoneNumber) from Person p", PersonDTO.class);
-            //persons = query.getResultList();
             
-            persons = em.createQuery("Select new entity.PersonDTO(p.firstName, p.lastName, p.phoneNumber) from Person p", PersonDTO.class).getResultList();
+            TypedQuery<PersonDTO> query = em.createQuery("Select new entity.PersonDTO(p.firstName, p.lastName, p.phoneNumber) from Person p", PersonDTO.class);
+            persons = query.getResultList();
             
             em.getTransaction().commit();
             return persons;
@@ -76,15 +79,21 @@ public class FacadePerson
         }
     }
     
-    public Person deletePerson(Long id)
+    public Person deletePerson(Person person)
     {
         EntityManager em = emf.createEntityManager();
 
         try
         {
             em.getTransaction().begin();
-            Person p = em.find(Person.class, id);
-            em.remove(p);
+            Query query = em.createQuery("select p from Person p where p.firstName = :firstName", Person.class);
+            query.setParameter("firstName", person.getFirstName());
+            query.setParameter("lastName", person.getLastName()); 
+            Person p = (Person) query.getSingleResult();
+            if(p != null)
+            {
+                em.remove(p);                
+            }
             em.getTransaction().commit();
             return p;
         }
@@ -94,27 +103,28 @@ public class FacadePerson
         }
     }
     
-    public Person editPerson(Person pers)
+    public Person editPerson(Person person)
     {
         EntityManager em = emf.createEntityManager();
 
         try
         {
             em.getTransaction().begin();
-            Person p = em.find(Person.class, pers.getId());
+            Query query = em.createQuery("select p from Person p where p.firstName = :firstName", Person.class);
+            query.setParameter("firstName", person.getFirstName());
+            query.setParameter("lastName", person.getLastName()); 
+            Person p = (Person) query.getSingleResult();
             if(p != null)
             {
-                p = pers;
+                p = person;
                 em.merge(p);
-                em.getTransaction().commit();
-                return p;
             }
+            em.getTransaction().commit();
+            return p;
         }
         finally
         {
             em.close();
-        }  
-        
-        return null;
+        }
     }
 }
