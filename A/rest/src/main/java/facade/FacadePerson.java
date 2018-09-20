@@ -17,19 +17,22 @@ public class FacadePerson
         this.emf = emf;
     }
     
-    public Person getPerson(Person person)
+    public PersonDTO getPerson(Person person)
     {
         EntityManager em = emf.createEntityManager();
 
-        Person p = null;
+        PersonDTO p = null;
         
         try
         {
             em.getTransaction().begin();
-            Query query = em.createQuery("select p from Person p where p.firstName = :firstName", Person.class);
+            TypedQuery<PersonDTO> query = em.createQuery("Select new entity.PersonDTO(p.firstName, p.lastName, p.phoneNumber) from Person p where p.firstName = :firstName and p.lastName = :lastName", PersonDTO.class);
             query.setParameter("firstName", person.getFirstName());
-            query.setParameter("lastName", person.getLastName()); 
-            p = (Person) query.getSingleResult();
+            query.setParameter("lastName", person.getLastName());
+            if(query.getResultList().size() > 0)
+            {
+                p = query.getResultList().get(0);
+            }
             em.getTransaction().commit();
             return p;
         }
@@ -48,11 +51,8 @@ public class FacadePerson
         try
         {
             em.getTransaction().begin();
-            //persons = em.createQuery("Select p from Person p").getResultList();
-            
             TypedQuery<PersonDTO> query = em.createQuery("Select new entity.PersonDTO(p.firstName, p.lastName, p.phoneNumber) from Person p", PersonDTO.class);
             persons = query.getResultList();
-            
             em.getTransaction().commit();
             return persons;
         }
@@ -86,7 +86,7 @@ public class FacadePerson
         try
         {
             em.getTransaction().begin();
-            Query query = em.createQuery("select p from Person p where p.firstName = :firstName", Person.class);
+            Query query = em.createQuery("select p from Person p where p.firstName = :firstName and p.lastName = :lastName", Person.class);
             query.setParameter("firstName", person.getFirstName());
             query.setParameter("lastName", person.getLastName()); 
             Person p = (Person) query.getSingleResult();
@@ -110,7 +110,7 @@ public class FacadePerson
         try
         {
             em.getTransaction().begin();
-            Query query = em.createQuery("select p from Person p where p.firstName = :firstName", Person.class);
+            Query query = em.createQuery("select p from Person p where p.firstName = :firstName and p.lastName = :lastName", Person.class);
             query.setParameter("firstName", person.getFirstName());
             query.setParameter("lastName", person.getLastName()); 
             Person p = (Person) query.getSingleResult();

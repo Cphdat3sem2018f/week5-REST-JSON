@@ -59,3 +59,6 @@ Jersey 2.27 UserGuide (Section 7)
 Oracle Docs Response
   * [Class Response](http://docs.oracle.com/javaee/7/api/javax/ws/rs/core/Response.html)  
     Skim method summary
+
+Jersey Testing
+  * [Jersey Unit Testing](https://www.logicbig.com/tutorials/java-ee-tutorial/jax-rs/jax-rs-unit-testing.html)
