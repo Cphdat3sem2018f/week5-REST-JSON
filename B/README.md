@@ -8,7 +8,7 @@
 ### Exercises
  * [Exercise Day1](https://docs.google.com/document/d/1IKTh5aFDzg9d3A2Kt6rRZsLAW-9PfvoXyLmyjCp0I4E/edit?usp=sharing) Basic ReSTful webservice.
   * [Exercise Day2](https://docs.google.com/document/d/1CduP9YD5wn43oxjNQ6Lo_DUQwpnv3aiu3NGGHaeV2Ec/edit?usp=sharing) REST api with DTOs
-  * [Exercise Day3]() Error handling
+  * [Exercise Day3](https://docs.google.com/document/d/1-aBZ_BGX1LTCWFjCM_EWB7XnoUDEiWPsAam3RjyZQg0/edit?usp=sharing) Error handling
   * [StudyPoint Exercise](https://docs.google.com/document/d/1aqJx93Y9fROeYq6xbneWoBstVeDXIn00vimT0AWqaPk/edit?usp=sharing)
 
 ### Web service
