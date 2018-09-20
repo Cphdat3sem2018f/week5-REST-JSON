@@ -96,11 +96,10 @@ public class RESTPerson
             //return Response.status(Response.Status.NOT_ACCEPTABLE).entity("{}").build();
             
             // 1
-            //throw new WebApplicationException(Response.status(406).entity(gson.toJson(pdto)).build());
-            //throw new NoPersonException("{\"reason\":\"There is no person\"}");
+            //throw new WebApplicationException(Response.status(406).entity("{\"message\":\"There is no person\"}").build());
+            //throw new NoPersonException("{\"message\":\"There is no person\"}");
             
             // 2
-            /*
             try
             {
                 throw new NumberFormatException("Number must be an integer");
@@ -111,9 +110,9 @@ public class RESTPerson
                 String eejson = gson.toJson(ee);
                 return Response.status(500).entity(eejson).build();  
             }
-            */
+            
             // 3
-            throw new RuntimeException("Some runtime exception occured");                       
+            //throw new RuntimeException("Some runtime exception occured");                       
         }       
     }    
 }
